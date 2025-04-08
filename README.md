@@ -1,8 +1,8 @@
-# 🐾 Dog Finder App
+# 🐾 Sniff N See
 
-A fun and simple React application that lets users browse and explore different dog breeds using the Dog CEO API.
+Sniff N See is a simple web app that allows users to view multiple images of dog breeds and view information based on their selections
 
-## 🔍 Features
+##  Features
 
 - Browse a list of dog breeds with images
 - View detailed images of selected breeds
@@ -18,9 +18,9 @@ A fun and simple React application that lets users browse and explore different 
 
 - React (Functional Components + Hooks)
 - React Router DOM
-- CSS Modules (planned redesign)
+- CSS Modules
 - Dog CEO API
-- Jest + React Testing Library (for testing)
+- Jest + React Testing Library
 
 ---
 
@@ -30,3 +30,5 @@ A fun and simple React application that lets users browse and explore different 
 ```bash
 git clone https://github.com/oram79/Dog-Finder-App.git
 cd Dog-Finder-App
+npm install
+npm start

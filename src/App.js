@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import BreedSelector from './components/breedSelector.jsx';
 import ImageGallery from './components/imageGallery.jsx';
 
@@ -8,44 +7,93 @@ function App() {
   const [selectedBreed, setSelectedBreed] = useState(''); 
   const [imageCount, setImageCount] = useState(1); 
   const [fetchedImages, setFetchedImages] = useState([]); 
+  const [loading, setLoading] = useState(false); 
+  const [error, setError] = useState(null);
 
-  // Uses the API to fetch images for the user
-  useEffect(() => {
-    const fetchBreeds = async () => {
+  // Fetch all breeds
+  const fetchBreeds = async () => {
+    try {
+      setLoading(true);
+      setError(null);
       const response = await fetch('https://dog.ceo/api/breeds/list/all');
+      if (!response.ok) throw new Error('Failed to fetch breed list');
       const data = await response.json();
       setBreeds(Object.keys(data.message)); 
-    };
+    } catch (err) {
+      setError('Unable to fetch dog breeds at the moment. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchBreeds();
   }, []);
-  // controls the breed selection from the user
+
   const handleBreedChange = (event) => {
     setSelectedBreed(event.target.value);
   };
-  // controls how many images the users wants to see
+
   const handleImageCountChange = (event) => {
     setImageCount(parseInt(event.target.value));
   };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (selectedBreed && imageCount > 0 && imageCount <= 100) {
-      const images = [];
-      for (let i = 0; i < imageCount; i++) {
-        const imageResponse = await fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`);
-        const imageData = await imageResponse.json();
-        images.push(imageData.message);
+      try {
+        setLoading(true);
+        setError(null);
+        const images = [];
+        for (let i = 0; i < imageCount; i++) {
+          const imageResponse = await fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random`);
+          if (!imageResponse.ok) throw new Error('Failed to fetch image');
+          const imageData = await imageResponse.json();
+          images.push(imageData.message);
+        }
+        setFetchedImages(images);
+      } catch (err) {
+        setError('Error fetching dog images. Please try again.');
+      } finally {
+        setLoading(false);
       }
-      setFetchedImages(images);
     } else {
       alert('You must select a breed & choose the number of images');
     }
   };
+
+  const handleClearForm = () => {
+    setSelectedBreed('');
+    setImageCount(1);
+    setFetchedImages([]);
+  };
+  
+
   return (
-      
-        <div className="mainbox">
-          <div className='header'>
-            <h1>Dog Image Gallery</h1>
-          </div>
+    <div className="mainbox">
+      <div className='header'>
+        <h1>🐾 Sniff & See 🐾</h1>
+        <h2>A Place To Find A New Friend :)</h2>
+      </div>
+
+      {/* Error Handling */}
+      {error && (
+        <div className="error">
+          <p>{error}</p>
+          <button onClick={fetchBreeds}>Retry</button>
+        </div>
+      )}
+
+      {/* Loader */}
+      {loading && (
+        <div className="loader">
+          <p>Fetching the good boys and girls... 🐾</p>
+        </div>
+      )}
+
+      {/* Show Form + Gallery if not loading or error */}
+      {!loading && !error && (
+        <>
           <BreedSelector
             breeds={breeds}
             selectedBreed={selectedBreed}
@@ -53,22 +101,13 @@ function App() {
             imageCount={imageCount}
             onImageCountChange={handleImageCountChange}
             onSubmit={handleSubmit}
+            onClearForm={handleClearForm}
           />
           {fetchedImages.length > 0 && <ImageGallery images={fetchedImages} />}
-          <h3> Help Give a Dog a New Leash on Life!</h3>
-          <div>
-            <a href="https://www.beaglepaws.com/" target="_blank" rel="noopener noreferrer">
-            <GoArrowRight /> Donate Here!! <GoArrowLeft />
-            </a>
-          </div>
-          <div>
-          <a href="https://www.beaglepaws.com/" target="" rel=""></a>
-          </div>
-          <div className='footer'>
-           <h2>Logan's Dog Finder &copy; Since 2024</h2>
-          </div>
-        </div>
-      
+        </>
+      )}
+    </div>
   );
 }
+
 export default App;

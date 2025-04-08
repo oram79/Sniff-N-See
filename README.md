@@ -1,4 +1,4 @@
-# 🐾 Sniff N See
+# 🐾 Sniff-N-See
 
 Sniff N See is a simple web app that allows users to view multiple images of dog breeds and view information based on their selections
 

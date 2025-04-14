@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaHeart, FaRegHeart, FaTimes, FaDownload } from 'react-icons/fa';
-import '../styles/ImageModel.css';
+import '../styles/ImageModal.css';
 
 const ImageModal = ({ imageUrl, onClose, isFavorite, onToggleFavorite }) => {
   // Close when clicking outside the image

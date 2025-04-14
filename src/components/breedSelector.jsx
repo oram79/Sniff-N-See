@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaUndoAlt, FaSearch, FaDog } from 'react-icons/fa';
 import '../styles/BreedSelector.css';
+
 const BreedSelector = ({
   breeds,
   selectedBreed,

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import BreedSelector from './components/breedSelector.jsx';  // Fixed path but kept PascalCase for component
-import ImageGallery from './components/imageGallery.jsx';    // Fixed path but kept PascalCase for component
+import BreedSelector from './components/breedSelector.jsx';
+import ImageGallery from './components/imageGallery.jsx';
 import BreedInfo from './components/BreedInfo.jsx';
 import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';

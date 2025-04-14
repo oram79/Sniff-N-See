@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaPaw, FaRunning, FaCut, FaHeart, FaBrain } from 'react-icons/fa';
 import BreedSelector from './components/breedSelector.jsx';
 import ImageGallery from './components/imageGallery.jsx';
 import BreedInfo from './components/BreedInfo.jsx';

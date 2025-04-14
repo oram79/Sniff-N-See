@@ -1,0 +1,131 @@
+.breed-comparison {
+    background-color: #fffaf0;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    border: 2px solid #deb887;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .breed-comparison h3 {
+    color: #5c4033;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+  }
+  
+  .comparison-placeholder {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table;
+  }
+  
+  .comparison-header,
+  .comparison-row {
+    display: flex;
+    border-bottom: 1px solid #deb887;
+  }
+  
+  .comparison-header {
+    border-bottom: 2px solid #deb887;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff8e7;
+  }
+  
+  .category-column {
+    width: 150px;
+    min-width: 150px;
+    padding: 12px;
+    font-weight: bold;
+    color: #5c4033;
+    display: flex;
+    align-items: center;
+    background-color: #fff8e7;
+  }
+  
+  .breed-column {
+    flex: 1;
+    min-width: 180px;
+    padding: 12px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .breed-header {
+    position: relative;
+    padding-right: 20px;
+  }
+  
+  .breed-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #5c4033;
+  }
+  
+  .remove-breed-btn {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: all 0.2s ease;
+  }
+  
+  .remove-breed-btn:hover {
+    background-color: #e05555;
+    transform: scale(1.1);
+  }
+  
+  .comparison-body .comparison-row:nth-child(odd) {
+    background-color: #fff8e7;
+  }
+  
+  .comparison-body .comparison-row:nth-child(even) {
+    background-color: #fffaf0;
+  }
+  
+  .comparison-row:hover {
+    background-color: #fff0d6 !important;
+  }
+  
+  .breed-value {
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 768px) {
+    .breed-comparison {
+      padding: 15px;
+      margin: 20px auto;
+    }
+    
+    .category-column {
+      width: 120px;
+      min-width: 120px;
+      padding: 10px;
+    }
+    
+    .breed-column {
+      min-width: 150px;
+      padding: 10px;
+    }
+  }

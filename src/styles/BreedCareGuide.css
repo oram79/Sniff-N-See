@@ -1,0 +1,180 @@
+.breed-care-guide {
+    background-color: #fffaf0;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px auto;
+    border: 2px solid #deb887;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .breed-care-guide h3 {
+    color: #5c4033;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+  }
+  
+  /* Desktop tabs styling */
+  .care-guide-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #deb887;
+    padding-bottom: 10px;
+  }
+  
+  .tab-button {
+    background: none;
+    border: none;
+    padding: 12px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #666;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .tab-button svg {
+    font-size: 1.1rem;
+  }
+  
+  .tab-button:hover {
+    color: #5c4033;
+    background-color: rgba(222, 184, 135, 0.1);
+  }
+  
+  .tab-button.active {
+    color: #5c4033;
+    font-weight: 600;
+  }
+  
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #5c4033;
+  }
+  
+  /* Care guide content styling */
+  .care-guide-content {
+    padding: 10px;
+  }
+  
+  .care-guide-content h4 {
+    color: #5c4033;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .care-guide-description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #555;
+    font-style: italic;
+  }
+  
+  .care-guide-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .care-guide-detail-item {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .care-guide-detail-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+  
+  .care-guide-detail-item h5 {
+    color: #5c4033;
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+  }
+  
+  .care-guide-detail-item p {
+    margin: 0;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+  /* Mobile accordion styling */
+  .care-guide-accordion {
+    display: none;
+  }
+  
+  .accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #deb887;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .accordion-header {
+    width: 100%;
+    background-color: #fff8e7;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background-color: #fff0d6;
+  }
+  
+  .accordion-header.active {
+    background-color: #deb887;
+    color: white;
+  }
+  
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+  
+  .accordion-content {
+    padding: 0 15px 15px;
+    background-color: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .breed-care-guide {
+      padding: 20px 15px;
+    }
+    
+    .desktop-tabs,
+    .desktop-content {
+      display: none;
+    }
+    
+    .care-guide-accordion {
+      display: block;
+    }
+    
+    .care-guide-details {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }

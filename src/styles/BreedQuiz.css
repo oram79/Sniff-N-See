@@ -1,0 +1,252 @@
+.breed-quiz,
+.breed-quiz-intro {
+  background-color: #fffaf0;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px auto;
+  border: 2px solid #deb887;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.breed-quiz-intro {
+  text-align: center;
+}
+
+.breed-quiz-intro h3 {
+  color: #5c4033;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.breed-quiz-intro p {
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.start-quiz-btn {
+  background-color: #5c4033;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+  background-color: #7b5e43;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Quiz styles */
+.quiz-progress {
+  height: 8px;
+  background-color: #e7d8c9;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #5c4033;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.question-counter {
+  text-align: center;
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.breed-quiz h3 {
+  color: #5c4033;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  background-color: white;
+  border: 1px solid #deb887;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.option-btn:hover {
+  background-color: #fff8e7;
+  border-color: #c9a769;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-icon {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Quiz results */
+.quiz-results {
+  text-align: center;
+}
+
+.results-intro {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.match-results {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.match-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.match-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.match-rank {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #5c4033;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.match-details {
+  flex: 1;
+}
+
+.match-breed {
+  margin: 0 0 5px 0;
+  color: #5c4033;
+  font-size: 1.1rem;
+}
+
+.match-score-container {
+  height: 8px;
+  background-color: #e7d8c9;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 3px;
+  width: 100%;
+}
+
+.match-score-bar {
+  height: 100%;
+  background-color: #5c4033;
+  border-radius: 4px;
+}
+
+.match-percentage {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.view-breed-btn {
+  background-color: #5c4033;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.view-breed-btn:hover {
+  background-color: #7b5e43;
+}
+
+.restart-quiz-btn {
+  background-color: white;
+  border: 1px solid #deb887;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.restart-quiz-btn:hover {
+  background-color: #fff8e7;
+  border-color: #c9a769;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .breed-quiz,
+  .breed-quiz-intro {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  
+  .match-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .match-rank {
+    margin-right: 0;
+  }
+  
+  .view-breed-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,79 @@
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fffaf0;
+    border-top: 2px solid #deb887;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+  }
+  
+  .footer h3 {
+    font-size: 1.2rem;
+    color: #5c4033;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .footer-links {
+    margin: 15px 0;
+  }
+  
+  .adoption-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: #5c4033;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .adoption-link:hover {
+    background-color: #7b5e43;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .heart-icon {
+    margin-left: 8px;
+    color: #ff6b6b;
+  }
+  
+  .footer-info {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  .footer-info a {
+    color: #5c4033;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-info a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+  
+  @media (max-width: 600px) {
+    .footer {
+      padding: 15px 10px;
+      margin-top: 30px;
+    }
+    
+    .adoption-link {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }

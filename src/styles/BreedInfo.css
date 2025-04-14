@@ -1,0 +1,79 @@
+.breed-info {
+    background-color: #fffaf0;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 20px auto;
+    border: 2px solid #deb887;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .breed-info:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .breed-info h3 {
+    color: #5c4033;
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #deb887;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .breed-info-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .breed-info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    color: #5c4033;
+    margin-bottom: 3px;
+  }
+  
+  .info-value {
+    color: #333;
+  }
+  
+  .breed-info-note {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+  }
+  
+  .breed-info.loading {
+    text-align: center;
+    color: #5c4033;
+    padding: 20px;
+    font-style: italic;
+  }
+  
+  .breed-info.error {
+    background-color: #ffe0e0;
+    color: #a94442;
+    border-color: #d9534f;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .breed-info-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .breed-info {
+      padding: 12px;
+      margin: 15px auto;
+    }
+  }

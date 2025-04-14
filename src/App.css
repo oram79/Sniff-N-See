@@ -1,38 +1,152 @@
+/* Main App Styling */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main container */
+.mainbox {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures the header radius is visible */
+  transition: all 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app-content {
+  padding: 25px;
+}
+
+@media (max-width: 950px) {
+  .mainbox {
+    margin: 20px;
+  }
+  
+  .app-content {
+    padding: 20px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Error state styling */
+.error {
+  background-color: #ffe0e0;
+  color: #a94442;
+  padding: 20px;
+  margin: 25px auto;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #d9534f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.error p {
+  margin-bottom: 15px;
+}
+
+.error button {
+  padding: 8px 20px;
+  background-color: #d9534f;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.error button:hover {
+  background-color: #c9302c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Loader styling */
+.loader {
+  text-align: center;
+  padding: 20px;
+}
+
+.loader p {
+  font-size: 1.2rem;
+  color: #5c4033;
+  margin-bottom: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Skeleton loading elements */
+.skeleton-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skeleton-item {
+  width: 160px;
+  height: 160px;
+  border-radius: 15px;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Favorites section */
+.favorites-section {
+  margin-top: 40px;
+  border-top: 2px dashed #deb887;
+  padding-top: 20px;
+}
+
+.favorites-section h3 {
+  color: #5c4033;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* Accessibility focus outline */
+*:focus {
+  outline: 2px solid #5c4033;
+  outline-offset: 2px;
+}
+
+/* General button styling */
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .skeleton-item {
+    width: 120px;
+    height: 120px;
   }
 }

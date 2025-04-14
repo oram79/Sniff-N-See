@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import { 
-  FaPaw, 
-  FaBone, 
-  FaRunning, 
-  FaHeart, 
-  FaClipboardCheck, 
-  FaBrain,
-  FaCut,
-  FaChevronDown,
-  FaChevronUp
-} from 'react-icons/fa';
+import { FaPaw, FaBone, FaRunning, FaHeart, FaBrain, FaCut, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import '../styles/BreedCareGuide.css';
 
 const BreedCareGuide = ({ breed }) => {

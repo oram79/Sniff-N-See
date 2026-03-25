@@ -1,4 +1,4 @@
-# 🐾 Sniff-N-See
+# 🐾 Sniff-N-See 
 
 A delightful React application for browsing dog breeds, viewing images, and learning about different dogs.
 

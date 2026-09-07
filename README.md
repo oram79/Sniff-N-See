@@ -1,8 +1,8 @@
-# 🐾 Sniff-N-See 
+# Sniff-N-See 
 
-A delightful React application for browsing dog breeds, viewing images, and learning about different dogs.
+An React application for browsing dog breeds, viewing images, and learning about different dogs.
 
-## ✨ Features
+## Features
 
 - **Browse Dog Breeds**: Search and explore a comprehensive list of dog breeds
 - **Image Gallery**: View multiple high-quality images of your selected breed
@@ -13,51 +13,13 @@ A delightful React application for browsing dog breeds, viewing images, and lear
 - **Favorites**: Save your favorite dog images for future reference
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 
-## 🛠️ Technologies
+## Technologies
 
-- **React 18**: Functional components with hooks
+- **React**: Functional components with hooks
 - **CSS Modules**: For component-based styling
-- **React Icons**: For beautiful UI elements
+- **React Icons**: For UI elements
 - **Dog CEO API**: For breed data and images
-- **Local Storage**: To persist favorites
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher recommended)
-- npm or yarn
-
-### Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/your-username/sniff-n-see.git
-cd sniff-n-see
-```
-
-2. **Install dependencies**
-
-```bash
-npm install
-# or
-yarn install
-```
-
-3. **Start the development server**
-
-```bash
-npm start
-# or
-yarn start
-```
-
-4. **Open your browser**
-
-Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
-
-## 📱 App Usage Guide
+- **Local Storage**: To store favorites
 
 ### Finding a Breed
 
@@ -85,29 +47,10 @@ Visit [http://localhost:3000](http://localhost:3000) to see the app in action.
 2. Select a breed from the dropdown
 3. Browse through the nutrition, exercise, grooming, health, and training information
 
-## 🧪 Running Tests
-
-```bash
-npm test
-# or
-yarn test
-```
-
-## 🔨 Building for Production
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The build artifacts will be stored in the `build/` directory.
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👏 Acknowledgements
+## Acknowledgements
 
 - [Dog CEO API](https://dog.ceo/dog-api/) for the wonderful dog images and breed data
-- All the dog lovers who inspired this project
